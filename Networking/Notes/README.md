@@ -8,11 +8,11 @@
 - Professor messor(Youtube) - Network+ playlist - OSI model video
 
 ## What i learned 
-OSI Model (7 Layers)
-Physical Layer – Transmits raw bits through physical medium
-Data Link Layer – Ensures error-free data transfer using MAC addresses(Switching layer)
-Network Layer – Handles routing using IP addresses(Routing Layer)
-Transport Layer – Provides reliable data delivery (TCP/UDP)
-Session Layer – Manages connections between systems
-Presentation Layer – Translates, encrypts, and compresses data
-Application Layer – Provides services to end users (HTTP, FTP, etc.)
+- OSI Model (7 Layers)
+- Physical Layer – Transmits raw bits through physical medium
+- Data Link Layer – Ensures error-free data transfer using MAC addresses(Switching layer)
+- Network Layer – Handles routing using IP addresses(Routing Layer)
+- Transport Layer – Provides reliable data delivery (TCP/UDP)
+- Session Layer – Manages connections between systems
+- Presentation Layer – Translates, encrypts, and compresses data
+- Application Layer – Provides services to end users (HTTP, FTP, etc.)
