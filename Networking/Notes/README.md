@@ -26,6 +26,10 @@
 
 ---
 
+## From where I studied 
+- TCP/IP - Gate smashers(Cybersecurity and Ethical Hacking Playlist)
+- How internet works - ApnaCollege video
+
 ## What I Studied
 
 - TCP/IP Protocol Suite (4 Layer Model)
