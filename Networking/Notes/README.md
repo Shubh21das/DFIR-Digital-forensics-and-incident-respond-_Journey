@@ -100,3 +100,13 @@
 8. Browser reassembles and displays data
 
 ---
+
+
+# Day 03 - Revision + Reading book 
+## what i read
+- computer networking - A top down approach is one of the best fundamentals books you can read when starting your cybersecurity or metworking journey
+- It starts with what is internet and how it works
+- what are the components in the connection of a device
+- how internet works, what are different types of cables
+
+---
