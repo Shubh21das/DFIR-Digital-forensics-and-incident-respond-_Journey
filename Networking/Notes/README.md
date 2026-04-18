@@ -112,7 +112,7 @@
 -----
 
 
-# TCP 3-Way Handshake
+# Day 04 - TCP 3-Way Handshake
 
 The TCP 3-way handshake is a process used to establish a **reliable connection** between a client and a server.
 
