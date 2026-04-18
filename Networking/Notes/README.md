@@ -112,21 +112,21 @@
 -----
 
 
-## 📡 TCP 3-Way Handshake
+# TCP 3-Way Handshake
 
 The TCP 3-way handshake is a process used to establish a **reliable connection** between a client and a server.
 
-### 🔹 Key Points
+## Key Points
 - TCP is **connection-oriented** and ensures reliable data transfer.
 - Synchronizes **sequence numbers (ISN)** for tracking data.
 - Negotiates parameters like **MSS** and **window size** before communication.
 
-### 🔹 Steps
+## Steps
 1. **SYN** – Client initiates connection  
 2. **SYN + ACK** – Server acknowledges and responds  
 3. **ACK** – Client confirms → connection established  
 
-### 🔹 Common TCP Flags
+## Common TCP Flags
 - **SYN** → Start connection  
 - **ACK** → Acknowledge  
 - **FIN** → Close connection  
