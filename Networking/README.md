@@ -100,7 +100,7 @@
 8. Browser reassembles and displays data
 
 
-## Day 02 Lab-1 - Wireshark Lab (Packet Analysis)
+# Day 02 Lab-1 - Wireshark Lab (Packet Analysis)
 
 ### Objective
 - Capture and analyze network packets using Wireshark  
@@ -215,9 +215,9 @@ Ensures ordered, reliable, and error-checked communication.
 
 ---
 
-## Day 6 Lab-3 – Wireshark Basics
+# Day 6 Lab-3 – Wireshark Basics
 
-### Where to Place Wireshark
+## Where to Place Wireshark
 Used to troubleshoot **application connectivity issues** across a network.
 
 **Approach:**
@@ -232,19 +232,19 @@ Used to troubleshoot **application connectivity issues** across a network.
 
 ---
 
-### Wireshark Filtering
+## Wireshark Filtering
 
-#### 1. Capture Filters (Pre-filtering)
+### 1. Capture Filters (Pre-filtering)
 - Applied **before capturing**
 - Filters traffic at source → reduces load
 
-#### 2. Display Filters (Post-filtering)
+### 2. Display Filters (Post-filtering)
 - Applied **after capture**
 - Helps analyze specific packets
 
 ---
 
-### 🧪 Common Filters
+## Common Filters
 - Protocols: `arp`, `dns`, `ip`, `tcp`, `udp`
 - IP filtering:  
   - `ip.addr == x.x.x.x`  
