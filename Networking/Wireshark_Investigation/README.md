@@ -1,4 +1,4 @@
-# Log4Shell (CVE-2021-44228) Threat Hunting & Incident Investigation
+# Day01 - Log4Shell (CVE-2021-44228) Threat Hunting & Incident Investigation
 
 ## Overview
 
@@ -95,3 +95,49 @@ Based on the available network evidence, the activity was classified as **Attemp
 ## Disclaimer
 
 This investigation was conducted in a controlled learning environment for educational and cybersecurity training purposes. All analysis was performed on provided packet capture data without interacting with live systems.
+
+
+# Day 2 – Wireshark Traffic Analysis & SOC Investigation
+
+## Overview
+As part of my **30 Days of Wireshark & SOC Analyst Challenge**, I analyzed a PCAP file to understand network behavior, identify key hosts, and practice structured SOC investigation techniques.
+
+## Objectives
+- Analyze network traffic using Wireshark
+- Identify major protocols in use
+- Investigate endpoints and conversations
+- Review DNS and HTTP activity
+- Develop hypothesis-driven investigation skills
+
+## Investigation Steps
+1. Protocol Hierarchy Analysis
+2. IPv4 Conversation Analysis
+3. Endpoint Identification
+4. DNS Investigation
+5. HTTP Traffic Review
+6. Initial Threat Assessment
+
+## Key Findings
+- Identified a Windows Active Directory environment
+- Observed DNS, HTTP, SMB, LDAP, Kerberos, and TLS traffic
+- Determined the primary workstation under investigation
+- Reviewed Microsoft and Akamai-related communications
+- No confirmed indicators of compromise (IOCs) were identified during initial analysis
+
+## Skills Practiced
+- Network Traffic Analysis
+- Wireshark Investigation
+- DNS Analysis
+- HTTP Analysis
+- Endpoint Identification
+- SOC Triage Methodology
+- Threat Hunting Fundamentals
+
+## Tools Used
+- Wireshark
+
+## Key Learning
+Understanding **normal network behavior** is the foundation of effective threat hunting and incident investigation. Before identifying malicious activity, a SOC analyst must first establish what "normal" looks like within the environment.
+
+---
+**Author:** Shubh Das  
