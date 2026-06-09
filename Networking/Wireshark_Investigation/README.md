@@ -99,6 +99,8 @@ This investigation was conducted in a controlled learning environment for educat
 
 # Day 2 – Wireshark Traffic Analysis & SOC Investigation
 
+## PCAP link - https://www.malware-traffic-analysis.net/2026/02/28/index.html
+
 ## Overview
 As part of my **30 Days of Wireshark & SOC Analyst Challenge**, I analyzed a PCAP file to understand network behavior, identify key hosts, and practice structured SOC investigation techniques.
 
@@ -141,3 +143,172 @@ Understanding **normal network behavior** is the foundation of effective threat 
 
 ---
 **Author:** Shubh Das  
+
+---
+
+# Traffic Analysis Exercise #3 - Active Directory Traffic Investigation
+
+## PCAP Link - https://www.malware-traffic-analysis.net/2026/01/31/index.html
+
+## Overview
+
+This repository contains the investigation notes and findings from a Wireshark PCAP analysis focused on Windows Active Directory traffic. The objective was to identify host communications, analyze protocol behavior, and determine whether the observed activity represented normal domain operations or potential malicious behavior.
+
+## Objectives
+
+- Analyze a real-world PCAP file using Wireshark
+- Identify the most active hosts and conversations
+- Investigate SMB, LDAP, Kerberos, and RPC traffic
+- Understand Active Directory-related communications
+- Practice a SOC-style investigation workflow
+
+## Investigation Summary
+
+### Capture Statistics
+
+| Metric | Value |
+|----------|----------|
+| Total Packets | 51,181 |
+| Capture Duration | 10 Minutes 23 Seconds |
+| Capture Size | 27 MB |
+| Average Packet Size | 516 Bytes |
+
+### Key Hosts Identified
+
+| IP Address | Description |
+|------------|------------|
+| 10.1.21.58 | Internal Host |
+| 10.1.21.2 | Internal Host |
+| 104.21.46.67 | Cloudflare |
+| 153.92.1.49 | Hostinger |
+| 142.251.116.95 | Google |
+
+### Major Protocols Observed
+
+- SMB2
+- DCE/RPC
+- SAMR
+- LSARPC
+- Kerberos
+- LDAP
+- TLS
+
+## Analysis Performed
+
+### Host Communication Analysis
+
+The majority of traffic occurred between:
+
+10.1.21.58 ↔ 10.1.21.2
+
+Analysis of conversations revealed communication over:
+
+| Port | Service |
+|--------|---------|
+| 88 | Kerberos |
+| 135 | RPC Endpoint Mapper |
+| 389 | LDAP |
+| 445 | SMB |
+
+These protocols are commonly associated with Active Directory environments.
+
+### SMB Investigation
+
+Observed:
+
+- Tree Connect Requests
+- IPC$ Share Access
+- SAMR Operations
+- User and Group Enumeration
+
+Examples:
+
+- EnumDomains
+- LookupDomain
+- OpenUser
+- QueryUserInfo
+- GetGroupsForUser
+
+### Kerberos Investigation
+
+Observed:
+
+- AS-REQ
+- AS-REP
+- TGS-REQ
+- TGS-REP
+
+These exchanges indicate normal Kerberos authentication activity within a Windows domain environment.
+
+### LDAP Investigation
+
+Observed:
+
+- bindRequest
+- bindResponse
+- searchRequest
+
+These requests suggest directory service queries and Active Directory interactions.
+
+## Key Findings
+
+### Confirmed
+
+- Active communication between two internal systems
+- Use of Active Directory-related protocols
+- User and group information queries
+- Kerberos authentication exchanges
+- SMB administrative share access (IPC$)
+
+### Not Observed
+
+- Malware execution
+- Command and Control (C2) traffic
+- Data exfiltration
+- Malicious file transfers
+- Lateral movement activity
+
+## Skills Demonstrated
+
+- Wireshark Traffic Analysis
+- Protocol Hierarchy Analysis
+- Endpoint Analysis
+- Conversation Analysis
+- SMB Investigation
+- LDAP Investigation
+- Kerberos Analysis
+- Active Directory Traffic Recognition
+- SOC Investigation Methodology
+
+## Learning Outcomes
+
+This investigation highlighted the importance of understanding Windows networking protocols before drawing security conclusions.
+
+Key concepts explored:
+
+- SMB & IPC$
+- LDAP
+- Kerberos
+- Active Directory
+- RPC
+- SAMR
+- Windows Domain Communications
+
+A major takeaway was learning how normal Active Directory operations can appear complex and suspicious when protocol behavior is not fully understood.
+
+## Conclusion
+
+Based on the evidence collected, the traffic appears consistent with normal Windows Active Directory operations. No confirmed indicators of compromise were identified during the investigation.
+
+This exercise provided valuable experience in recognizing Windows domain traffic patterns and reinforced the importance of protocol knowledge during network investigations.
+
+---
+
+**Tools Used**
+- Wireshark
+- AbuseIPDB
+- Windows Networking Concepts
+- Active Directory Fundamentals
+
+**Author:** Shubh Das  
+**Focus Area:** SOC Analysis | Network Traffic Analysis | Threat Hunting
